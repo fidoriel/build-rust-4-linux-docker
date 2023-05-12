@@ -1,5 +1,6 @@
 FROM debian:bookworm
 
+ENV CARGO_NET_GIT_FETCH_WITH_CLI=true
 RUN mkdir /r4l
 WORKDIR /r4l
 RUN mkdir workdir/
