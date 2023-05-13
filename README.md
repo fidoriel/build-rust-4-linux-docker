@@ -5,7 +5,10 @@ A Docker Container to build linux with Rust4Linux
 cd into dir kernel folder on host.
 
 Build the Docker file. You may need to match the folder name in the volume
-docker buildx build --platform linux/amd64 -t buildlinux . && docker run --platform linux/amd64 -it -v $(pwd)/linux:/r4l/workdir buildlinux bash
+``docker buildx build --platform linux/amd64 -t buildlinux . && docker run --platform linux/amd64 -it -v $(pwd)/linux:/r4l/workdir buildlinux bash``
+
+or pull from docker hub
+``docker run --platform linux/amd64 -it -v $(pwd)/linux:/r4l/workdir fidoriel/build-rust-4-linux-docker bash``
 
 install all dependencies for THIS kernel version. This needs to be done once
 ``../commands.sh``
